@@ -1,0 +1,8 @@
+###
+GET http://localhost:8080/courses
+###
+GET http://localhost:8080/courses/1
+###
+GET http://localhost:8080/instructors
+###
+GET http://localhost:8080/instructors/4
