@@ -6,3 +6,40 @@ GET http://localhost:8080/courses/1
 GET http://localhost:8080/instructors
 ###
 GET http://localhost:8080/instructors/4
+###
+POST http://localhost:8080/courses
+Content-Type: application/json
+
+{
+    "courseName": "Python",
+    "creditHours": 4,
+    "duration": 120,
+    "semester": "Spring 2023"
+}
+###
+POST http://localhost:8080/instructors
+Content-Type: application/json
+
+{
+    "instructorName": "James",
+    "department": "CSE",
+    "courses": []
+  }
+###
+PUT http://localhost:8080/instructors/9/addToCourse/5
+###
+GET http://localhost:8080/students
+###
+GET http://localhost:8080/students/8
+###
+GET http://localhost:8080/students/8/getCourses
+###
+POST http://localhost:8080/students
+Content-Type: application/json
+
+ {
+        "studentName": "Thana'",
+        "major": "CSE"
+}
+###
+PUT http://localhost:8080/students/9/addToCourse/5
