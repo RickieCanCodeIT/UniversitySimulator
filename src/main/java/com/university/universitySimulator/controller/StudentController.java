@@ -53,4 +53,10 @@ public class StudentController {
         }
         return courseRepo.findById(courseId).get();
     }
+
+    @DeleteMapping("/students/{id}")
+    public Iterable<Student> deleteStudent(@PathVariable long id) {
+        studentRepo.deleteById(id);
+        return studentRepo.findAll();
+    }
 }

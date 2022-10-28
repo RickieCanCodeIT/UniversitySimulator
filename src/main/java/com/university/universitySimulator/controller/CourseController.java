@@ -27,4 +27,10 @@ public class CourseController {
         courseRepo.save(newCourse);
         return courseRepo.findAll();
     }
+
+    @DeleteMapping("/courses/{id}")
+    public Iterable<Course> deleteCourse(@PathVariable long id) {
+        courseRepo.deleteById(id);
+        return courseRepo.findAll();
+    }
 }

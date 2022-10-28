@@ -5,7 +5,7 @@ GET http://localhost:8080/courses/1
 ###
 GET http://localhost:8080/instructors
 ###
-GET http://localhost:8080/instructors/4
+GET http://localhost:8080/instructors/1
 ###
 POST http://localhost:8080/courses
 Content-Type: application/json
@@ -43,3 +43,7 @@ Content-Type: application/json
 }
 ###
 PUT http://localhost:8080/students/9/addToCourse/5
+###
+DELETE http://localhost:8080/students/8
+###
+DELETE http://localhost:8080/instructors/1

@@ -48,4 +48,10 @@ public class InstructorController {
         }
         return instructorRepo.findAll();
     }
+
+    @DeleteMapping("/instructors/{id}")
+    public Iterable<Instructor> deleteInstructor(@PathVariable long id) {
+        instructorRepo.deleteById(id);
+        return  instructorRepo.findAll();
+    }
 }

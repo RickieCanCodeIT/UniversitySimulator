@@ -11,7 +11,7 @@ public class Instructor {
     private String instructorName;
     private String department;
 
-    @OneToMany(mappedBy = "instructor")
+    @OneToMany(mappedBy = "instructor", cascade = CascadeType.ALL, orphanRemoval = true)
     private Collection<Course> courses;
 
     public Instructor(String instructorName, String department) {

@@ -19,7 +19,7 @@ public class Course {
     @JsonIgnore
     private Instructor instructor;
 
-    @ManyToMany(mappedBy = "courses")
+    @ManyToMany(mappedBy = "courses", cascade = CascadeType.ALL)
     private Collection<Student> students;
 
     public Course(String courseName, int creditHours, int duration, String semester, Instructor instructor) {
